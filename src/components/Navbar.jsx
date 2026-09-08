@@ -1,0 +1,35 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <div className="w-full flex justify-center items-center gap-10">
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `px-3 py-2 rounded-md text-lg font-semibold ${
+            isActive
+              ? "bg-purple-600 text-white"
+              : "text-gray-300 hover:text-white"
+          }`
+        }
+      >
+        Pomodoro
+      </NavLink>
+      <NavLink
+        to="/short"
+        className={({ isActive }) =>
+          `px-3 py-2 rounded-md text-lg font-semibold ${
+            isActive
+              ? "bg-purple-600 text-white"
+              : "text-gray-300 hover:text-white"
+          }`
+        }
+      >
+        Short Break
+      </NavLink>
+    </div>
+  );
+};
+
+export default Navbar;
