@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="w-full flex justify-center items-center gap-10">
+    <div className="w-full  flex justify-center items-center gap-10 ">
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `px-3 py-2 rounded-md text-lg font-semibold ${
+          `px-3 py-2 rounded-md text-xs font-bold lg:text-lg lg:font-semibold ${
             isActive
               ? "bg-purple-600 text-white"
               : "text-gray-300 hover:text-white"
@@ -19,7 +19,7 @@ const Navbar = () => {
       <NavLink
         to="/short"
         className={({ isActive }) =>
-          `px-3 py-2 rounded-md text-lg font-semibold ${
+          `px-3 py-2 rounded-md text-xs font-bold lg:text-lg lg:font-semibold ${
             isActive
               ? "bg-purple-600 text-white"
               : "text-gray-300 hover:text-white"
