@@ -21,6 +21,49 @@ A modern, productivity-focused Pomodoro Timer built with React. This application
 - **React Router DOM** - Client-side routing between pages
 - **HTML5 Audio** - Sound effects and notifications
 
+## Installation
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
+
+### Steps
+1. Clone the repository:
+```bash
+git clone <https://github.com/Syed-Nalain-Abbas143/Pomodoro-Timer.git>
+cd "Pomodoro Timer"
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open your browser and navigate to:
+http://localhost:3000/
+
+## Project Structure
+public/
+├──sounds/
+  ├── click.wav
+  └── complete.wav
+src/
+├── components/
+│ ├── Buttons.jsx 
+│ ├── Header.jsx 
+│ ├── Navbar.jsx 
+│ └── Timer.jsx
+├── pages/
+│ ├── Pomodoro.jsx
+│ └── Shortbreak.jsx
+├── App.jsx # Main app component with routing
+├── index.css # Global styles
+└── main.jsx # Entry point
 
 ## Usage
 
@@ -85,3 +128,12 @@ Update the paths in your SoundManager component accordingly.
 4. **Experiment**: Adjust timer durations based on your productivity patterns
 5. **Track Sessions**: Keep a log of completed sessions for motivation
 
+## Acknowledgments
+
+- Built with [React](https://reactjs.org/)
+- Routing powered by [React Router](https://reactrouter.com/)
+- Inspired by the Pomodoro Technique by Francesco Cirillo
+
+---
+
+**Happy Productivity!**
