@@ -47,24 +47,6 @@ npm start
 4. Open your browser and navigate to:
 http://localhost:3000/
 
-## Project Structure
-public/
-├──sounds/
-  ├── click.wav
-  └── complete.wav
-src/
-├── components/
-│ ├── Buttons.jsx 
-│ ├── Header.jsx 
-│ ├── Navbar.jsx 
-│ └── Timer.jsx
-├── pages/
-│ ├── Pomodoro.jsx
-│ └── Shortbreak.jsx
-├── App.jsx # Main app component with routing
-├── index.css # Global styles
-└── main.jsx # Entry point
-
 ## Usage
 
 ### Starting a Work Session
