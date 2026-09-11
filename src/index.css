@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-body {
-  min-height: 100vh;
+.light {
   background: linear-gradient(
     135deg,
     #667eea 0%,
@@ -14,13 +13,20 @@ body {
   animation: gradientShift 15s ease infinite;
 }
 
-h1,.btn {
-  font-family: "Comic Relief", system-ui;
+.dark{
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e1b4b 25%,
+    #312e81 50%,
+    #111827 75%,
+    #020617 100%
+  );
+
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
 }
 
-h2 {
-  font-family: "JetBrains Mono", monospace;
-}
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
@@ -28,6 +34,17 @@ h2 {
   100% { background-position: 0% 50%; }
 }
 
+
+
+
+
 .btn{
   transition: all ease-in 0.2s;
+}
+h1,.btn {
+  font-family: "Comic Relief", system-ui;
+}
+
+h2 {
+  font-family: "JetBrains Mono", monospace;
 }

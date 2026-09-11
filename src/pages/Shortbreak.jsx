@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Timer from "../components/Timer.jsx";
 import Buttons from "../components/Buttons.jsx";
 
-const Shortbreak = () => {
+const Shortbreak = ({lightTheme}) => {
 
   const [isRunning, setisRunning] = useState(false);
   const [time, setTime] = useState(5*60);
@@ -54,7 +54,7 @@ const Shortbreak = () => {
     <div className="my-10 w-full flex justify-center items-center flex-col">
       <Timer minutes={minutes} sec={sec} />
 
-      <Buttons isRunning={isRunning} setisRunning={setisRunning} />
+      <Buttons isRunning={isRunning} setisRunning={setisRunning} lightTheme={lightTheme} />
     </div>
   );
 };
