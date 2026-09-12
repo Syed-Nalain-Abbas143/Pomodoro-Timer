@@ -9,19 +9,21 @@ import themeContext from './Context/globalContext'
 const App = () => {
   const [theme, setTheme] = useState(()=>{
     const getTheme = localStorage.getItem("theme");
-
     return getTheme || 'light';
   });
   
   useEffect(() => {
+    document.body.className = theme
     localStorage.setItem("theme",theme)
   }, [theme]);
 
   return (
-    <themeContext.Provider value={{theme,setTheme}}>
+    
       
-      <div className={`min-h-screen w-full ${theme==='light'?'light':'dark'}`}>
-     
+      <div>
+
+     <themeContext.Provider value={{theme,setTheme}}>
+
       <Header />
       <Navbar />
       
@@ -30,9 +32,11 @@ const App = () => {
         <Route path='/short' element={<ShortBreak />}/>
       </Routes>
 
+      </themeContext.Provider>
+
     </div>
 
-    </themeContext.Provider>
+    
   )
 }
 
