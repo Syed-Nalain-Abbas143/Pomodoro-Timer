@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Pomodoro from './pages/Pomodoro'
 import ShortBreak from './pages/Shortbreak'
 import Header from './components/Header'
@@ -7,9 +7,16 @@ import { Routes,Route } from 'react-router-dom'
 import themeContext from './Context/globalContext'
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(()=>{
+    const getTheme = localStorage.getItem("theme");
+
+    return getTheme || 'light';
+  });
   
-  
+  useEffect(() => {
+    localStorage.setItem("theme",theme)
+  }, [theme]);
+
   return (
     <themeContext.Provider value={{theme,setTheme}}>
       
