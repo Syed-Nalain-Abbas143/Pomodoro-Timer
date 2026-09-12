@@ -12,7 +12,7 @@ const Header = () => {
     );
 
   return (
-    <div className="flex w-full p-10 items-center justify-between">
+    <div className="flex w-full lg:p-10 p-5 items-center justify-between">
       <div>
         <h1 className="lg:text-3xl text-2xl font-bold text-white">
           Pomodoro Timer.
@@ -21,7 +21,7 @@ const Header = () => {
       <div>
         <button
           onClick={() => setTheme(() => (theme === "light" ? "dark" : "light"))}
-          className={`text-white font-semibold px-4 py-2 rounded-full cursor-pointer active:scale-90
+          className={`text-white font-semibold lg:px-4 lg:py-2 px-2 py-1 rounded-full cursor-pointer
         ${
           theme === "light"
             ? "bg-purple-600"

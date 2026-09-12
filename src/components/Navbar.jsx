@@ -6,7 +6,7 @@ const Navbar = () => {
   const {theme} = useContext(themeContext);
 
   return (
-    <div className="w-full  flex justify-center items-center gap-10 ">
+    <div className="w-full flex justify-center items-center gap-10 mt-10 lg:mt-0 ">
       <NavLink
         to="/"
         className={({ isActive }) =>
