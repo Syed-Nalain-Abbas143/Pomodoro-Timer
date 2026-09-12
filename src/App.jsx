@@ -4,24 +4,28 @@ import ShortBreak from './pages/Shortbreak'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import { Routes,Route } from 'react-router-dom'
-
+import themeContext from './Context/globalContext'
 
 const App = () => {
-  const [lightTheme, setLightTheme] = useState(true);
-  console.log(lightTheme);
+  const [theme, setTheme] = useState('light');
+  
   
   return (
-    <div className={`min-h-screen w-full ${lightTheme?'light':'dark'}`}>
+    <themeContext.Provider value={{theme,setTheme}}>
+      
+      <div className={`min-h-screen w-full ${theme==='light'?'light':'dark'}`}>
      
-      <Header lightTheme={lightTheme} setLightTheme={setLightTheme}/>
-      <Navbar lightTheme={lightTheme}/>
+      <Header />
+      <Navbar />
       
       <Routes>
-        <Route path='/' element={<Pomodoro lightTheme={lightTheme}/>}/>
-        <Route path='/short' element={<ShortBreak lightTheme={lightTheme}/>}></Route>
+        <Route path='/' element={<Pomodoro />}/>
+        <Route path='/short' element={<ShortBreak />}/>
       </Routes>
 
     </div>
+
+    </themeContext.Provider>
   )
 }
 

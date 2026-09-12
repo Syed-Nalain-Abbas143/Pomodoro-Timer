@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import themeContext from '../Context/globalContext'
 
-const Buttons = ({ isRunning, setisRunning, lightTheme }) => {
+const Buttons = ({ isRunning, setisRunning}) => {
+
+  const {theme} = useContext(themeContext)
+
   const toggleState = () => {
     const audio = new Audio("sounds/click.wav");
     audio.play();
@@ -12,7 +16,7 @@ const Buttons = ({ isRunning, setisRunning, lightTheme }) => {
       <button
         className={`pt-2 btn lg:w-50 lg:h-16 w-30 h-16 text-lg lg:text-[22px] rounded-sm  cursor-pointer font-bold
           ${
-            lightTheme
+            theme === 'light'
             ? "bg-white text-purple-600"
             : "bg-[rgb(255,255,255,0.4)] text-white"
           }

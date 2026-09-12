@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import PomoCount from "../components/PomoCount.jsx";
 
 
-const Pomodoro = ({lightTheme}) => {
+const Pomodoro = () => {
   const navigate = useNavigate();
 
   const [count, setCount] = useState(()=>{
@@ -78,7 +78,7 @@ const Pomodoro = ({lightTheme}) => {
   return (
     <div className="my-10 w-full flex justify-center items-center flex-col">
       <Timer minutes={minutes} sec={sec} />
-      <Buttons isRunning={isRunning} setisRunning={setisRunning} lightTheme={lightTheme} />
+      <Buttons isRunning={isRunning} setisRunning={setisRunning}  />
       <PomoCount count={count} />
     </div>
   );
